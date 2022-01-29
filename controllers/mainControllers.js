@@ -1,12 +1,18 @@
 const db = require("../db.js");
 
 const getMain = async(req, res) => {
-    let selectData = db.conn.query("SELECT * FROM blog", function(err, result, fields) {
-        if (err) throw err;
-        console.log(result);
+    var obj = {};
+    let sql = "SELECT * FROM blog";
+    let selectData = db.conn.query(sql, function(err, result, fields) {
+        if (err) {
+            throw err;
+        } else {
+            res.render("index", { title: "Ana Sayfa", data: result });
+        }
+
     });
 
-    res.render("index", { title: "Ana Sayfa" });
+
 };
 
 const getBlogDetail = async(req, res) => {
