@@ -1,4 +1,11 @@
+const db = require("../db.js");
+
 const getMain = async(req, res) => {
+    let selectData = db.conn.query("SELECT * FROM blog", function(err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+    });
+
     res.render("index", { title: "Ana Sayfa" });
 };
 
