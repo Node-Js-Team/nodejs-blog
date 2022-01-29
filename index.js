@@ -5,7 +5,8 @@ const db = require('./db.js');
 app.use(express.json());
 
 //ROUTES
-app.use(mainRoutes);
+app.use('/',mainRoutes);
+//app.use('admin',adminRoutes);
 
 //404
 app.get("*", async (req, res) => {
