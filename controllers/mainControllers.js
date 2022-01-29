@@ -1,10 +1,9 @@
-const getMain = async (req, res) => {
-        res.send("asdsa");
-  };
+const getMain = async(req, res) => {
+    res.render("index", { title: "Ana Sayfa" });
+};
 
-  
 
-  module.exports ={
-      getMain,
-  }
-  
+
+module.exports = {
+    getMain,
+}
