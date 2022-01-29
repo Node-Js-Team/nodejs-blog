@@ -18,7 +18,7 @@ app.set("views", "./resources/View");
 
 app.use(ejsLayouts);
 //ROUTES
-app.use(BlogSlug, mainRoutes);
+app.use("/", mainRoutes);
 //app.use('admin',adminRoutes);
 
 //404

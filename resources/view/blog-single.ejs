@@ -2,12 +2,12 @@
 <div id="main" class="site-main">
   <!-- .featured-top -->
   <div class="featured-top">
-    <img src="images/blog/02.jpg" alt="post-image" />
+    <img src="<%=data[0]['image'] %>" alt="post-image" />
 
     <!-- .post-thumbnail -->
     <div
       class="post-thumbnail"
-      style="background-image: url(images/blog/01.jpg)"
+      style="background-image: url(<%=data[0]["image"] %>)"
     >
       <!-- .entry-header -->
       <header class="entry-header">
@@ -15,14 +15,14 @@
         <div class="entry-meta">
           <span class="cat-links">
             <a href="#" title="View all posts in Travel" rel="category tag"
-              >Travel</a
+              ><%=data[0]['slug'] %></a
             >
           </span>
         </div>
         <!-- .entry-meta -->
 
         <!-- .entry-title -->
-        <h1 class="entry-title">Mastering Portrait Photography</h1>
+        <h1 class="entry-title"><%=data[0]['title'] %></h1>
 
         <!-- .entry-meta -->
         <div class="entry-meta">
